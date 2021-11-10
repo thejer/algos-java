@@ -33,6 +33,24 @@ public class SortedSquares {
             newNums[k] = nums[i];
         return newNums;
     }
+    public int[] sortedSquares2(int[] nums) {
+        System.out.println(Arrays.toString(nums));
+        int n = nums.length;
+        int[] newNums = new int[n];
+        int left = 0, right = n - 1;
+        for (int i = n-1; i >= 0; i --) {
+            int square;
+            if (Math.abs(nums[left]) < Math.abs(nums[right])) {
+                square = nums[right];
+                right--;
+            } else{
+                square = nums[left];
+                left++;
+            }
+            newNums[i] = square * square;
+        }
+        return newNums;
+    }
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(sortedSquares(new int[]{-10000,-9999,-7,-5,0,0,10000})));
