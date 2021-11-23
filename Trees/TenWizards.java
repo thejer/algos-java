@@ -1,9 +1,6 @@
 package javaSolutions.Trees;
 
 import java.util.*;
-import org.junit.*;
-
-import static org.junit.Assert.*;
 
 public class TenWizards {
 
@@ -121,41 +118,5 @@ public class TenWizards {
             out[1]=itemsArray;
             return out;
         }
-    }
-
-    public static class UnitTest {
-        @Test
-        public void test1() {
-            Solution sol = new TenWizards().new Solution();
-            int[][] ids = {{1, 5, 9}, {2, 3, 9}, {4}, {}, {}, {9}, {}, {}, {}, {}};
-            List<List<Integer>> wizards = new ArrayList<>();
-            for (int i = 0; i < ids.length; i++) {
-                List<Integer> wizard = new ArrayList<>();
-                for (int j = 0; j < ids[i].length; j++) {
-                    wizard.add(ids[i][j]);
-                }
-                wizards.add(wizard);
-            }
-            List<Integer> res = sol.getShortestPath(wizards, 0, 9);
-            assertEquals(3, res.size());
-            assertEquals(0, (int) res.get(0));
-            assertEquals(5, (int) res.get(1));
-            assertEquals(9, (int) res.get(2));
-        }
-
-        @Test
-        public void test2() {
-            Solution_2 sol = new TenWizards().new Solution_2();
-            int[][] wizards = {{1,2,3}, {8,6,4}, {7,8,3}, {8,1}, {6}, {8,7}, {9,4}, {4,6}, {1}, {1,4}};
-            int [][] res = sol.getShortestPath(wizards, 0, 9);
-            assertEquals(23, res[0][0]);
-        }
-    }
-
-    public static void main(String[] args) {
-        Solution_2 sol = new TenWizards().new Solution_2();
-        int[][] wizards = {{1,2,3}, {8,6,4}, {7,8,3}, {8,1}, {6}, {8,7}, {9,4}, {4,6}, {1}, {1,4}};
-        int[][] res = sol.getShortestPath(wizards, 0, 9);
-        System.out.println(res);
     }
 }

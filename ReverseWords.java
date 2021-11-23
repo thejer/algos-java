@@ -1,5 +1,8 @@
 package javaSolutions;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class ReverseWords {
     public static String reverseWords(String s) {
         String [] words = s.split(" ");
@@ -15,6 +18,7 @@ public class ReverseWords {
     }
 
     private static String reverseString(char[] s) {
+        System.out.println(s);
         int start = 0, end = s.length -1;
         while (start < end) {
             char temp = s[start];
