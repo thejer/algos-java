@@ -1,5 +1,7 @@
 package javaSolutions.Patterns.TwoPointers;
 
+import java.util.Arrays;
+
 class PairWithTargetSum {
 
   public static int[] search(int[] arr, int targetSum) {
