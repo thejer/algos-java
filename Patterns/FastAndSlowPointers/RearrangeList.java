@@ -19,7 +19,6 @@ class RearrangeList {
       reversed = reversed.next;
       node1 = temp;
     }
-    head = node1;
   }
 
   static ListNode reverse (ListNode head) {
